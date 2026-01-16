@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue hinzufügen - GitHub Status Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header__title">
+                <span class="header__icon">➕</span>
+                <h1>Issue hinzufügen</h1>
+            </div>
+            <p class="header__subtitle">Füge ein neues GitHub Issue zu deiner Übersicht hinzu</p>
+        </header>
+
+        <!-- Messages -->
+        <div id="message-container"></div>
+
+        <!-- Form -->
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <form id="add-issue-form">
+                <!-- GitHub URL -->
+                <div class="form-group">
+                    <label for="github-url" class="form-label">GitHub Issue URL</label>
+                    <input type="url" id="github-url" class="form-input"
+                        placeholder="https://github.com/owner/repo/issues/123" required>
+                    <span class="form-hint">Beispiel: https://github.com/facebook/react/issues/12345</span>
+                </div>
+
+                <!-- Type Selection -->
+                <div class="form-group">
+                    <label for="issue-type" class="form-label">Typ</label>
+                    <select id="issue-type" class="form-select" required>
+                        <option value="Bug" selected>🐛 Bug</option>
+                        <option value="Feature">✨ Feature</option>
+                    </select>
+                    <span class="form-hint">Wähle den Typ des Issues</span>
+                </div>
+
+                <!-- Category Selection -->
+                <div class="form-group">
+                    <label for="category-select" class="form-label">Kategorie auswählen</label>
+                    <select id="category-select" class="form-select">
+                        <option value="">Lädt Kategorien...</option>
+                    </select>
+                    <span class="form-hint">Wähle eine vorhandene Kategorie oder erstelle eine neue unten</span>
+                </div>
+
+                <!-- New Category -->
+                <div class="form-group">
+                    <label for="new-category" class="form-label">Oder neue Kategorie erstellen</label>
+                    <input type="text" id="new-category" class="form-input"
+                        placeholder="z.B. Backend, Frontend, Documentation">
+                    <span class="form-hint">Wenn ausgefüllt, wird eine neue Kategorie erstellt</span>
+                </div>
+
+                <!-- Actions -->
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;">
+                        ✓ Issue hinzufügen
+                    </button>
+                    <a href="index.html" class="btn btn-secondary">
+                        ← Zurück
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="add.js"></script>
+</body>
+
+</html>
