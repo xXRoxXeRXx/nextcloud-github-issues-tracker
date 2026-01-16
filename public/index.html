@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Status Tracker</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Status Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <div class="header__title">
-        <span class="header__icon">🚀</span>
-        <h1>GitHub Status Tracker</h1>
-      </div>
-      <p class="header__subtitle">Übersichtliche, kategorisierte Darstellung deiner GitHub Issues</p>
-      <div class="header__actions">
-        <a href="add.html" class="btn btn-primary">
-          <span>➕</span>
-          Issue hinzufügen
-        </a>
-      </div>
-    </header>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header__title">
+                <span class="header__icon">🚀</span>
+                <h1>Nextcloud Github Issues Status Tracker</h1>
+            </div>
+            <p class="header__subtitle"></p>
+            <div class="header__actions">
+                <a href="add.html" class="btn btn-primary">
+                    <span>➕</span>
+                    Issue hinzufügen
+                </a>
+            </div>
+        </header>
 
-    <!-- Loading State -->
-    <div id="loading" class="loading">
-      <div class="spinner"></div>
-      <p class="text-secondary">Lade Issues...</p>
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p class="text-secondary">Lade Issues...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" style="display: none;"></div>
+
+        <!-- Issues Container -->
+        <div id="issues-container"></div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state" style="display: none;">
+            <div class="empty-state__icon">📋</div>
+            <h2 class="empty-state__title">Noch keine Issues</h2>
+            <p>Füge dein erstes GitHub Issue hinzu, um loszulegen!</p>
+            <a href="add.html" class="btn btn-primary mt-md">
+                ➕ Issue hinzufügen
+            </a>
+        </div>
     </div>
 
-    <!-- Error Message -->
-    <div id="error-message" style="display: none;"></div>
-
-    <!-- Issues Container -->
-    <div id="issues-container"></div>
-
-    <!-- Empty State -->
-    <div id="empty-state" class="empty-state" style="display: none;">
-      <div class="empty-state__icon">📋</div>
-      <h2 class="empty-state__title">Noch keine Issues</h2>
-      <p>Füge dein erstes GitHub Issue hinzu, um loszulegen!</p>
-      <a href="add.html" class="btn btn-primary mt-md">
-        ➕ Issue hinzufügen
-      </a>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
